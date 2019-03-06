@@ -19,30 +19,37 @@ Route::get('/', function () {
 
 /// route produit//////
 ///
-route:: get('/produit','ControllerProduct@index');
-route:: get('/produit/CreerProduit','ControllerProduct@Create');
-route:: get('/produit/Sauvegarde','ControllerProduct@Store');
-route:: get('/produit/EditerProduit','ControllerProduct@Edit');
-route:: get('/produit/{productID}','ControllerProduct@Show');
-route:: get('/produit/MiseaJour','ControllerProduct@Update');
-route:: get('/produit/SuppressionProduit','ControllerProduct@Destroy');
+route:: get('/produit','ProductController@index');
+route:: get('/produit/{productID}','ProductController@Show');
+
+
 
 // route order
-Route::get('/commandes/recherche', 'ControllerOrder@search');
-Route::get('/commandes/', 'ControllerOrder@index');
-Route::get('/commandes/repasser', 'ControllerOrder@reorder');
-Route::get('/commandes/{commandeId}', 'ControllerOrder@testUrl');
-Route::get('/commandes/annuler/{nom}', 'ControllerOrder@cancelUrl');
-Route::get('/commandes/annuler', 'ControllerOrder@cancel');
+Route::get('/commandes/recherche', 'OrderController@search');
+Route::get('/commandes/', 'OrderController@index');
+Route::get('/commandes/repasser', 'OrderController@reorder');
+Route::get('/commandes/{commandeId}', 'OrderController@testUrl');
+Route::get('/commandes/annuler/{nom}', 'OrderController@cancelUrl');
+Route::get('/commandes/annuler', 'OrderController@cancel');
 
 //// USER
-Route::get('/users/creation', 'ControllerUsers@create');
-Route::get('/users', 'ControllerUsers@confirmSave');
-Route::get('/users/connexion', 'ControllerUsers@login');
+Route::get('/users/creation', 'UsersControllerUsers@create');
+Route::get('/users', 'UsersController@confirmSave');
+Route::get('/users/connexion', 'UsersController@login');
 
 
 ///Basket
 //route::get('/basket/add/productId');
-route::get('/basket/delete/','ControllerBasket@supprimPanier');
-route::get('/basket','ControllerBasket@panier');
-route::get('/basket/update/','ControllerBasket@PanierAjour');
+route::get('/basket/delete/','BasketController@supprimPanier');
+route::get('/basket','BasketController@panier');
+route::get('/basket/update/','BasketController@PanierAjour');
+
+
+///admin
+
+route::get('/Admin', 'AdminControllern@debut');
+route:: get('Admin/produit/update','AdminController@productUpdate')->name("productUpdate");
+route:: get('Admin/produit/Edit','AdminController@productEdit');
+route:: get('Admin/produit/Creer','AdminController@productCreate');
+route:: get('Admin/produit/Save','AdminController@ProductStore');
+route:: get('Admin/produit/delete','AdminController@productDestroy');
