@@ -6,13 +6,15 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use App\bananes;
 
 class ControllerProduct extends Controller
 {
 
     public function index()
     {
-        return view('products.index');
+        $produits=bananes::all();
+        return view('products.index', ['listeProduits' => $produits]);
     }
 
     public function Create (){
@@ -27,7 +29,8 @@ class ControllerProduct extends Controller
 
     public function Show($productID)
     {
-        return view('products.View',['produit'=>$productID]);
+
+        return view('products.show',['produit'=>$productID]);
     }
     public function Edit()
     {

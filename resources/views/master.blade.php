@@ -12,14 +12,8 @@
 @include('includes.header')
 
     <div class="content">
-        <div class="title m-b-md">
-
             @yield('content')
-
-        </div>
     </div>
-
-</div>
 
 @include('includes.footer')
 </body>

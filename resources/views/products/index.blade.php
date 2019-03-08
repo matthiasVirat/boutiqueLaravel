@@ -8,14 +8,20 @@ Catalogue
 
     <h1>Catalogue</h1>
 
+    @foreach($listeProduits as $listeProduit)
+    <div class="article">
+        <p>
+            Nom : <a href="#">{{$listeProduit->nom}}</a><br>
+            Prix : {{$listeProduit->prix}}<br>
+            description : {{$listeProduit->description}}
+        </p>
+    </div>
+
+    @endforeach
+
+@endsection
 
 
 
 
 
-<!--    --><?php
-//    $bdd = new PDO('mysql:host=localhost;dbname=;charset=utf8', '', '');
-//    $products = $bdd->query('select * from ');
-//    foreach ($products as $product){
-//             echo $product[]
-//        ?>
