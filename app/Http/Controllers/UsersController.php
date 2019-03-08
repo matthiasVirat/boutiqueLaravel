@@ -8,18 +8,26 @@ use Illuminate\Http\Request;
 class UsersController extends Controller
 
 {
-    public function create(){
+    public function create()
+    {
+
         return view('pages.user.create');
     }
 
-    public function confirmSave (){
+    public function confirmSave()
+    {
         return view('pages.user.confirmSave');
     }
 
-    public function login (){
+    public function login()
+    {
         return view('pages.user.login');
     }
 
+
+    public function ajoutProduit()
+    {
+
+    }
+
 }
-
-

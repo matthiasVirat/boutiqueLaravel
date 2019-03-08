@@ -53,5 +53,7 @@ route::get('/Admin', 'AdminControllern@debut');
 route:: get('Admin/produit/update','AdminController@productUpdate')->name("productUpdate");
 route:: get('Admin/produit/Edit','AdminController@productEdit');
 route:: get('Admin/produit/Creer','AdminController@productCreate');
-route:: get('Admin/produit/Save','AdminController@ProductStore');
+route:: post('Admin/produit/Save','AdminController@ProductStore')->name('newProd');
 route:: get('Admin/produit/delete','AdminController@productDestroy');
+route:: post('Admin/produit/ecrase/{productId}','AdminController@productEcraser')->name('delet');
+
