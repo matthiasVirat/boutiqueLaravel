@@ -13,7 +13,9 @@ class ControllerProduct extends Controller
 
     public function index()
     {
-        $produits=bananes::all();
+//      $produits=bananes::all();
+
+        $produits=bananes::orderBy('prix')->get();
         return view('products.index', ['listeProduits' => $produits]);
     }
 
@@ -27,10 +29,10 @@ class ControllerProduct extends Controller
         return view('products.SaveNew');
     }
 
-    public function Show($productID)
+    public function Show($id)
     {
-
-        return view('products.show',['produit'=>$productID]);
+        $fiche= bananes::find($id);
+        return view('products.show',['produit'=>$fiche]);
     }
     public function Edit()
     {

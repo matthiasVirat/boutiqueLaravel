@@ -10,11 +10,11 @@ Catalogue
 
     @foreach($listeProduits as $listeProduit)
     <div class="article">
-        <p>
-            Nom : <a href="#">{{$listeProduit->nom}}</a><br>
-            Prix : {{$listeProduit->prix}}<br>
-            description : {{$listeProduit->description}}
-        </p>
+
+        <img src="{{asset('medias/' . $listeProduit->img)}}"/>
+        <a href="{{route('fichePdt',$listeProduit->id)}}">{{$listeProduit->nom}}</a>
+        <p>{{$listeProduit->prix}} €</p>
+
     </div>
 
     @endforeach
