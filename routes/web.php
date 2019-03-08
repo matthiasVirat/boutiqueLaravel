@@ -13,14 +13,16 @@
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome',['title'=>'sam_the_best']);
 });
 
 
 /// route produit//////
-///
-route:: get('/produit','ProductController@index');
-route:: get('/produit/{productID}','ProductController@Show');
+///produi
+route:: get('/produit','ProductController@voir');
+route:: get('/produitTriPrix','ProductController@trierPrix');
+route:: get('/produitAlpha','ProductController@ordreAlpha');
+route:: get('/produit/{productID}','ProductController@Show')->name('description');
 
 
 

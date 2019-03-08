@@ -49,5 +49,28 @@ html, body {
     margin-bottom: 30px;
 }
 img{
-    width: 150px;
+    width: 250px;
+}
+.conteneur{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: auto;
+    margin-left: 100px;
+}
+.descrip{
+    display: flex;
+    flex-direction: row;
+
+
+}
+.navbar-brand{
+    padding-left: 700px;
+    font-size: 50px;
+}
+nav{
+    color: lime;
+}
+img.descrip{
+    width: 500px;
 }
