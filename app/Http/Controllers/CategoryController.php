@@ -9,6 +9,11 @@ use Illuminate\Database\Eloquent\Collection;
 
 class CategoryController extends Controller
 {
+    public function __construct()
+    {//authentification admin
+        $this->middleware('auth');
+
+    }
     public function show()
     {
         $categories = Prd_category::all();

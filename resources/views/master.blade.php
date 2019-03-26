@@ -29,12 +29,7 @@
         <li class="nav-item">
             <a class="nav-link" href="/basket">Panier</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/admin/stats/trafic">Trafic</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/admin/stats/stocks">Stocks</a>
-        </li>
+
         <li class="nav-item">
             <a class="nav-link" href="/admin/category">Administration</a>
         </li>

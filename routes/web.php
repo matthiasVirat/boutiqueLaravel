@@ -68,7 +68,8 @@ Route:: get('/produit/{productID}','ProductController@show')->name('fiche'); //r
 ///// STATISTIQUES
 Route::get('/admin/stats/stocks', 'StockController@stock');
 Route::get('/admin/stats/{orderID}', 'ControllerOrder@show')->name('commande');
-Route::get('/admin/stats/trafic', 'TraficController@trafic');
+Route::get('/admin/stats/trafic', '
+@trafic');
 
 Route:: get('/produit/{productID}','ProductController@show')->name('fiche');
 //route vers fiche produit
@@ -78,3 +79,11 @@ Route:: post('admin/ajout','CategoryController@create')->name('cat');
 Route:: post('admin/suppression','CategoryController@delete')->name('supcat');
 Route:: post('admin/modif','CategoryController@update')->name('modifcat');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin', 'AdminController@admin')
+    ->middleware('is_admin')
+    ->name('admin');
