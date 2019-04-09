@@ -12,6 +12,10 @@ header {
     background-color: white;
 }
 
+header .logo {
+    padding: 1rem 0 0 1rem;
+}
+
 h1 {
     font-family: 'Audiowide', cursive;
 }
