@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Product;
@@ -14,7 +15,7 @@ class ProductController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth')->except(['index' ,'show']);
+        $this->middleware('auth')->except(['index' ,'show', 'lastProdOrdered']);
     }
 
     public function index(Request $request)
@@ -106,8 +107,6 @@ class ProductController extends Controller
 
     public function destroy($id)
     {
-//        il faut ajouter le contrôle des commandes. Message d'erreur ou creation d'un statut
-//        de produit supprimé ?
 
         $product= Product::find($id);
         if ($product->orders->count() > 0){
@@ -123,10 +122,13 @@ class ProductController extends Controller
     public function edit($id)
     {
         $produit = Product::find($id);
-        return view('products.Edit', [
-            'produit' => $produit]);
+        return view('products.Edit', ['produit' => $produit]);
     }
 
+    public function lastProdOrdered ()
+    {
+        $lastProd = Order::where('status', 'V')->orderby('id', 'desc')->first()->products()->first();
+
+        return view('welcome', ['lastProdOrdered' => $lastProd]);
+    }
 }
-
-
