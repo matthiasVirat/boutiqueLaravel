@@ -18,10 +18,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/basket">Panier</a>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin">Administration</a>
-                </li>
+                @if(Auth::user() && Auth::user()->is_admin==1)
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">Administration</a>
+                    </li>
+                @endif
             </div>
 
             <!-- Authentication Links -->

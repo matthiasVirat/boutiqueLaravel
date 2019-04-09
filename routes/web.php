@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 //});
 
 // route Home //
-Route::get('/', 'ProductController@lastProdOrdered')->name('home');
+Route::get('/', 'ProductController@lastProdOrdered')->name('Accueil');
 
 /// route produit//////
 Route::get('/produit','ProductController@index')->name('listeProduit');
