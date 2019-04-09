@@ -13,12 +13,13 @@ Catalogue
 
 
 
-    <p>Classement par : </p>
+    {{--<p>Classement par : </p>--}}
     <div class="article">
+        <p>Classement par : </p>
         @if ($content == 'master')
-        <a href="/produit?sort=price&order=asc"><button type="button" class="btn btn-primary">Prix croissant</button> </a>
-        <a href="/produit?sort=price&order=desc"><button type="button" class="btn btn-primary">Prix décroissant</button> </a>
-        <a href="/produit?sort=name&order=asc"><button type="button" class="btn btn-primary">Nom</button> </a>
+            <a href="/produit?sort=price&order=asc"><button type="button" class="btn btn-primary">Prix croissant</button> </a>
+            <a href="/produit?sort=price&order=desc"><button type="button" class="btn btn-primary">Prix décroissant</button> </a>
+            <a href="/produit?sort=name&order=asc"><button type="button" class="btn btn-primary">Nom</button> </a>
         @elseif($content == 'masterAdmin')
             <a href="/admin/produit?sort=price&order=asc"><button type="button" class="btn btn-primary">Prix croissant</button> </a>
             <a href="/admin/produit?sort=price&order=desc"><button type="button" class="btn btn-primary">Prix décroissant</button> </a>

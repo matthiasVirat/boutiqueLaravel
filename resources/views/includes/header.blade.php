@@ -2,7 +2,7 @@
 <header>
     <nav>
     <div class="logo">
-        <img src="{{asset('image/BIS_logo_header.png')}}">
+        <a href="/"><img src="{{asset('image/BIS_logo_header.png')}}"></a>
     </div>
 
         <ul class="nav">
