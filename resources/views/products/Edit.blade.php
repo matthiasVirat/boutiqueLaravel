@@ -29,7 +29,7 @@
 
             <br>
 
-            <input type="submit" value="Modifier">
+            <input type="submit" value="Modifier" class="btn btn-primary">
 
     </form>
 

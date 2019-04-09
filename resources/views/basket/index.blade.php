@@ -33,7 +33,7 @@
                 quantité :
                 <input type="number" min="1" id="{{$product->name}}" name="quantity[{{$product->id}}]" value="{{$product->pivot->quantity}}" form="recalcul">
                  total : {{number_format((($product->pivot->quantity)*(($product->price)/100)), 2, ',', ' '). '€' }}
-                <button type="submit" name="suppProduct" value="{{$product->id}}">Supprimer</button>
+                <button type="submit" name="suppProduct" value="{{$product->id}}" class="btn btn-primary">Supprimer</button>
             </div>
 
             @php($totalPanier = $totalPanier + ($product->price) * ($product->pivot->quantity))
@@ -55,16 +55,16 @@
         {{--*********Supression panier*********--}}
         <form action="{{route('delBasket')}}" method="post">
             @csrf
-            <button type="submit" name="suppBasket" value="{{$panier->id}}">Annuler panier</button>
+            <button type="submit" name="suppBasket" value="{{$panier->id}}" class="btn btn-primary">Annuler panier</button>
         </form>
 
         {{--*********recalcul du panier*********--}}
-        <button type="submit" form="recalcul" value="{{$panier->id}}">Recalcul du Panier</button>
+        <button type="submit" form="recalcul" value="{{$panier->id}}" class="btn btn-primary">Recalcul du Panier</button>
 
         {{--*********validation du panier*********--}}
         <form action="{{route('basketValidate')}}" method="post">
             @csrf
-            <button type="submit" name="validate" value="{{$panier->id}}">Valider Cmd</button>
+            <button type="submit" name="validate" value="{{$panier->id}}" class="btn btn-primary">Valider Cmd</button>
         </form>
         {{--*********Total du panier*********--}}
         <strong>
@@ -75,7 +75,7 @@
 
 
     @else
-        <h1>Panier vide, <a href="/produit"> retour à la liste des produits</a></h1>
+        <h1>Panier vide, <a href="/produit" class="retour-prd"> retour à la liste des produits</a></h1>
     @endif
 
 @endsection

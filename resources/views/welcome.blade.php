@@ -7,5 +7,7 @@
 
 @section('content')
     <br>
-    <h1>Ma boutique</h1>
+    <h1>Brain in Shape</h1>
+    <h2>Un ésprit sain dans un corps sain</h2>
+    
 @endsection

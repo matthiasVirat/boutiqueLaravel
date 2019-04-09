@@ -14,7 +14,7 @@
         {{$produit->name}}<br>
         {{number_format((($produit -> price)/100), 2, ',', ' '). '€'}}<br>
         {{$produit->description}}<br>
-        <a href="{{route('destroy',$produit->id)}}"> Supprimer </a>
+        <a href="{{route('destroy',$produit->id)}}" class="btn btn-link"> Supprimer </a>
     </div>
 
 

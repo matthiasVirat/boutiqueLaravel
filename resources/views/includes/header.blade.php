@@ -1,22 +1,28 @@
 
-
+<header>
     <nav>
+    <div class="logo">
+        <img src="{{asset('image/BIS_logo_header.png')}}">
+    </div>
+
         <ul class="nav">
-            <li class="nav-item">
-                <a class="nav-link active" href="/">Home</a>
-            </li>
+            <div class="navbar">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="/produit">Catalogue</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/produit">Catalogue</a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="/basket">Panier</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/basket">Panier</a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="/admin">Administration</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin">Administration</a>
+                </li>
+            </div>
 
             <!-- Authentication Links -->
             @guest
@@ -29,7 +35,7 @@
                     {{--</li>--}}
                 {{--@endif--}}
             @else
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown top-right links">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
@@ -63,16 +69,17 @@
                         @auth
 {{--                            <a href="{{ url('/home') }}">Home</a>--}}
                         @else
-                            <a href="{{ route('login') }}">Login</a>
+                            <a href="{{ route('login') }}"><img src="{{asset('image/login.png')}}" alt="login" class="login-icone"></a>
 
                             @if (Route::has('register'))
-                                <a href="{{ route('register') }}">Register</a>
+                                <a href="{{ route('register') }}"><img src="{{asset('image/register.png')}}" alt="register" class="login-icone"></a>
                             @endif
                         @endauth
                     </div>
                 @endif
         </ul>
     </nav>
+</header>
 
 
 

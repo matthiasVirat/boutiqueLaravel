@@ -28,7 +28,7 @@
 
     <div class="category">
         <a href="/admin/category"> <button class="bouton">Gestion des catégories</button></a>
-    </div>
+    </div><br>
 
     <div class="stock">
         <a href="/admin/stats/stock"> <button class="bouton">statistiques de stock</button></a>

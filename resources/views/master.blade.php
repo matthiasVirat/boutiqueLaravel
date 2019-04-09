@@ -12,6 +12,8 @@
 
         <title>@yield('title')</title>
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
     </head>
     <body>
         @include('includes.header')

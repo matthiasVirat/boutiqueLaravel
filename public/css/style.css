@@ -1,10 +1,23 @@
 html, body {
-    background-color: #fff;
-    color: #636b6f;
-    font-family: 'Nunito', sans-serif;
+    /*font-family: 'Audiowide', cursive;*/
+    background-color: #0a1e36;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 200;
     height: 100vh;
     margin: 0;
+}
+
+header {
+    background-color: white;
+}
+
+h1 {
+    font-family: 'Audiowide', cursive;
+}
+
+h2 {
+    font-family: 'Audiowide', cursive;
 }
 
 .flex-center {
@@ -17,10 +30,28 @@ html, body {
     position: relative;
 }
 
+.navbar {
+    font-family: 'Audiowide', cursive;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 70rem;
+}
+
+.nav-item a{
+    color: white;
+    background-color: #0a1e36;
+    margin-left: 1rem;
+    font-family: 'Audiowide', cursive;
+}
+
 .top-right {
     position: absolute;
-    right: 10px;
-    top: 18px;
+    right: 1rem;
+    top: 1.2rem;
+}
+
+.login-icone {
+    width: 2rem;
 }
 
 .content {
@@ -37,6 +68,7 @@ html, body {
     padding: 20px;
     box-shadow: 0px 1px 5px;
     margin: 20px 40px 10px 40px;
+    color: #0a1e36;
 }
 
 .commande{
@@ -75,11 +107,12 @@ p strong
     height: 150px;
     font-size: 30px;
     align-items: center;
-    background-color: #FFF;
+    background-color: #9f013c;
+    color: white;
     overflow: hidden;
     padding: 20px;
     box-shadow: 0px 1px 5px;
-
+    font-family: 'Audiowide', cursive;
 }
 .acceuil{
     font-size: 40px;
@@ -94,3 +127,47 @@ p strong
     box-shadow: 0px 1px 5px;
 }
 
+.card-header {
+    background-color: #0a1e36;
+    font-family: 'Audiowide', cursive;
+    color: white;
+}
+
+.card-body {
+    background-color: #9f013c;
+    font-family: 'Audiowide', cursive;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #9f013c;
+    border-color: #0a1e36;
+    font-family: 'Audiowide', cursive;
+}
+
+.btn-primary:hover {
+    color:#fff;
+    background-color:#0a1e36;
+    border-color:#0a1e36;
+}
+
+.btn-link {
+    background-color: #9f013c;
+    border-color: #0a1e36;
+    color: white;
+    font-family: 'Audiowide', cursive;
+}
+
+.btn-link:hover {
+    color:#fff;
+    background-color:#0a1e36;
+    border-color:#0a1e36;
+}
+
+a.retour-prd {
+    color: white;
+}
+
+.form-prd {
+    background-color: #9f013c;
+}
