@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
-    <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="stylesheet" href="{{asset('css/xzoom.css')}}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
 
@@ -36,6 +37,10 @@
             @yield('content')
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{asset('js/xzoom.min.js')}}"></script>
+<script src="{{asset('js/script.js')}}"></script>
 </body>
 </html>
 
