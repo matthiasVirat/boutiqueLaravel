@@ -11,7 +11,7 @@
     <h2>Un ésprit sain dans un corps sain</h2>
 
     <h3>Le produit chaud du moment : </h3>
-    <div class="article">
+    <div class="article ">
         <img src="{{asset('image/'.$lastProdOrdered -> imgUrl)}}" alt="{{asset('image/'.$lastProdOrdered -> imgUrl)}}"
              xoriginal="{{asset('image/'.$lastProdOrdered -> imgUrl)}}" class="photo xzoom">
         {{$lastProdOrdered->name}}<br/>
