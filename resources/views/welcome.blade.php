@@ -12,7 +12,8 @@
 
     <h3>Le produit chaud du moment : </h3>
     <div class="article">
-        <img src="{{asset('image/'.$lastProdOrdered -> imgUrl)}}" alt="{{asset('image/'.$lastProdOrdered -> imgUrl)}}" class="photo">
+        <img src="{{asset('image/'.$lastProdOrdered -> imgUrl)}}" alt="{{asset('image/'.$lastProdOrdered -> imgUrl)}}"
+             xoriginal="{{asset('image/'.$lastProdOrdered -> imgUrl)}}" class="photo xzoom">
         {{$lastProdOrdered->name}}<br/>
         {{$lastProdOrdered->description}}<br/>
         {{number_format((($lastProdOrdered -> price)/100), 2, ',', ' '). '€'}}<br/>

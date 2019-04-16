@@ -10,7 +10,8 @@
     <h1>fiche produit</h1>
 
     <div class="article">
-        <img src="{{asset('image/'.$produit -> imgUrl)}}" alt="{{asset('image/'.$produit -> imgUrl)}}" xoriginal="{{asset('image/'.$produit -> imgUrl)}}" class="photo xzoom">
+        <img src="{{asset('image/'.$produit -> imgUrl)}}" alt="{{asset('image/'.$produit -> imgUrl)}}"
+             xoriginal="{{asset('image/'.$produit -> imgUrl)}}" class="photo xzoom">
         {{$produit->name}}<br/>
         {{$produit->description}}<br/>
         {{number_format((($produit -> price)/100), 2, ',', ' '). '€'}}<br/>
