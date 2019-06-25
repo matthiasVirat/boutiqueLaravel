@@ -8,8 +8,15 @@
 <header>
 <h1>Formulaire de création</h1>
 </header>
-
-
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <form method ="post" action="{{route('addProd')}}">
 {{csrf_field()}}
 

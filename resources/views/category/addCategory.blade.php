@@ -10,7 +10,7 @@
 
     <div class="form-group">
 
-    <h2>ajout d'une categorie</h2>
+        <h2>ajout d'une categorie</h2>
 
         <form method="post" action="{{route('cat')}}">
             {{csrf_field()}}
@@ -52,6 +52,18 @@
             <input type="submit" value="Envoyer" />
         </form>
 
+    </div>
+
+    <div>
+        <h2>Liste des catégories et leurs produits</h2>
+        @foreach($categories as $category)
+            <h3>{{ $category->name }}</h3>
+            @foreach($category->product as $product)
+                <ul>
+                    <li>{{ $product->name }}</li>
+                </ul>
+            @endforeach
+        @endforeach
     </div>
 @endsection
 

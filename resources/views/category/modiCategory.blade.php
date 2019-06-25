@@ -1,7 +1,7 @@
 @extends('masterAdmin')
 
 @section('title')
-    
+
 
 @endsection
 

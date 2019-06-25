@@ -7,9 +7,19 @@
 
 @section('content')
     <div class="acceuil">
-    <h2>Bienvenue sur la section administrateur</h2>
+        <h2>Bienvenue sur la section administrateur</h2>
     </div>
     <br>
+
+
+    {{--<p>--}}
+        {{--@foreach($chats as $chat)--}}
+            {{--{{ $chat }}--}}
+
+
+
+        {{--@endforeach--}}
+    {{--</p>--}}
 
 
     <div class="products">

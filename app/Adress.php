@@ -8,6 +8,8 @@ class adress extends Model
 {
     public $timestamps = false;
 
+    protected $table = 'adress';
+
     public function order()
     {
         return $this->hasMany('App\Adress');

@@ -39,7 +39,6 @@ class CategoryController extends Controller
 
     public function update(Request $request)
     {
-
         $idDeMaCategorie = $request->input('categorie');
         $nouveauNom = $request->input ('name');
         $cat=Prd_category::find($idDeMaCategorie);
@@ -65,7 +64,7 @@ class CategoryController extends Controller
 //      dans $products j'apelle mon modele auquel j'applique une condition(WHERE)
 //      la methode cursor me permet de parcourir uniquement les enregistrement dont prd_category_id=$monID.
 
-        $products = Product::where('prd_category_id', $idDeMaCategorie)->get();
+        $products = Product::where('prd_category_id','=', $idDeMaCategorie)->get();
         // boucle foreach qui me permet de parcourir la liste des resultat (via Productlist)
         // a chaque tour de boucle elle parcourt une ligne et assigne a product la valeur de la ligne.
         foreach ($products as $product) {
@@ -74,7 +73,7 @@ class CategoryController extends Controller
             //sauvegarde de l'objet $product.
             $product->save();
         }
-          // je recupere dans ma table categorie l'enregistrement possedant comme id $monid
+          // je recupere dans ma table categorie l'enregistrement possedant comme id $idDeMaCategorie
             $categorie = Prd_category::find($idDeMaCategorie);
         //j'applique la methode delete
             $categorie->delete();

@@ -28,7 +28,9 @@ class ProductController extends Controller
             $sort = $request->get('sort');
             $order = $request->get('order');
         }
-        $products = product::where('stock', '>',  0)->orderby("$sort", "$order")->get(); //requete pour afficher tous mes articles
+        $products = product::where('stock', '>',  0)->orderby($sort, $order)->get();
+        //requete pour afficher tous mes articles
+        $products = product::where('weight', '<',  400)->orderby($sort, $order)->get();
 
         if ($request->path()== 'produit'){
             $content = 'master';
@@ -46,6 +48,22 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
+
+
+        $request->validate([
+            'name'=>['required','min:4','max:70'],
+            'price'=>['required','integer','min:0'],
+            'imgUrl'=>['required','min:6','max:80'],
+            'description'=>['required','min:6','max:255'],
+            'weight'=>['required','integer','min:0'],
+            'stock'=>['required','integer','min:0'],
+            'prd_category_id'=>['required','exists:prd_categories,id']
+
+
+        ]);
+
+
+
         $product=new Product;
 
         $product->name=$request->name;
@@ -55,6 +73,8 @@ class ProductController extends Controller
         $product->weight=$request->weight;
         $product->stock=$request->stock;
         $product->prd_category_id=$request->prd_category_id;
+
+
         $product->save();
 //
         return redirect(route('adminProduit'));

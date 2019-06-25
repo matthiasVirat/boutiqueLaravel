@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class customer extends Model
+class Customer extends Model
 {
     public $timestamps = false;
 
@@ -16,5 +16,8 @@ class customer extends Model
     public function adress()
     {
         return $this->hasMany('App\Adress');
+    }
+    public function user(){
+        return $this->belongsTo('App\User');
     }
 }
